@@ -9,6 +9,8 @@
     width: 1000px;
     border: 2px solid grey;
     border-radius: 3px;
+    padding: 10px;
+    background-color: aliceblue;
 }
 
 .btns {
@@ -28,6 +30,10 @@
 
 .btns a:hover {
     transform: scale(1.1);
+}
+
+p {
+    font-size: 18px;
 }
 
 .btns a:active {

@@ -1,9 +1,7 @@
-import axios from "axios";
 import {BrowserRouter, BrowserRouter as Router, NavLink, Route, Switch} from "react-router-dom";
-import {useEffect, useState} from "react";
 import Home from "./Components/Home/Home";
-import AboutUs from "./Components/AboutUs/AboutUs";
-import Contacts from "./Components/Contacts/Contacts";
+import composition from "./Components/composition/composition";
+import Health from "./Components/Health/Health";
 import './App.css';
 
 function App() {
@@ -12,14 +10,14 @@ function App() {
             <div className="container-inner">
                 <BrowserRouter>
                     <div className="btns">
-                        <NavLink to="/">Home</NavLink>
-                        <NavLink to="/AboutUs">About Us</NavLink>
-                        <NavLink to="/Contacts">Contacts</NavLink>
+                        <NavLink to="/">Главная</NavLink>
+                        <NavLink to="/Health">Здоровье</NavLink>
+                        <NavLink to="/composition">Состав</NavLink>
                     </div>
                     <Switch>
                         <Route path="/" exact component={Home}/>
-                        <Route path="/AboutUs" component={AboutUs}/>
-                        <Route path="/Contacts" component={Contacts}/>
+                        <Route path="/Health" component={Health}/>
+                        <Route path="/composition" component={composition}/>
                         <Route render={() => <h1>NOT FOUND</h1>}/>
                     </Switch>
                 </BrowserRouter>
